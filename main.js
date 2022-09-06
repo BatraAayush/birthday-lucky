@@ -3,8 +3,6 @@ const luckyNum = document.querySelector("#lucky-number");
 const checkBtn = document.querySelector("#check");
 const output = document.querySelector("#output");
 
-console.log(dob,luckyNum,checkBtn);
-
 checkBtn.addEventListener("click",() => {
     const dateStr = dob.value;
     //converting num of type string to number
@@ -13,7 +11,9 @@ checkBtn.addEventListener("click",() => {
     if(dateStr&& num) {
         checkIfLucky(dateStr, num);
     } else {
-        output.innerHTML = "Please fill input!"
+        output.innerHTML = "Please fill input!";
+        output.style.color = "red";
+
     }
 })
 
@@ -22,9 +22,12 @@ function checkIfLucky(dateStr, num) {
     console.log("num: " + num);
     console.log("sum % num: " + sum % num);
     if(sum % num === 0) {
-        output.innerHTML = "lucky"
+        output.innerHTML = "Yayyy!!!Your Birthdate is LUCKY &#128518;";
+        output.style.color = "#163a54";
+
     } else {
-        output.innerHTML = "unlucky"
+        output.innerHTML = "Oops! Your Birthdate is UNLUCKY...<br>REMEMBER: You make your own LUCK &#128526;";
+        output.style.color = "#163a54";
     }
 
 }

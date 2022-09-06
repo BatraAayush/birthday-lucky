@@ -1,0 +1,44 @@
+:root {
+    --primaryColor: #dee8f0;
+    --secondaryColor: #163a54;
+  }
+
+
+body{
+    width:30%;
+    margin: auto;
+    background-color: var(--primaryColor);
+    color:  var(--secondaryColor);
+}
+
+
+
+label {
+    display: block;
+    font-weight: 600;
+}
+
+input{
+    margin:0.5rem 0 1rem 0;
+    width: 100%;
+}
+
+button{
+    background-color: var(--primaryColor);
+    color:var(--secondaryColor);
+    display: inline-block;
+    padding: 0.3rem;
+    border-color:var(--secondaryColor);
+    border-radius: 0.3rem;
+}
+
+button:hover{
+    background-color: var(--secondaryColor);
+    color:var(--primaryColor);
+}
+
+p{
+    color: --secondaryColor;
+    font-size: large;
+    font-weight: 500;
+}
