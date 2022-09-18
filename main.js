@@ -8,10 +8,10 @@ checkBtn.addEventListener("click",() => {
     //converting num of type string to number
     const num = Number(luckyNum.value);
     //validation for input
-    if(dateStr&& num) {
+    if(dateStr && num > 0) {
         checkIfLucky(dateStr, num);
     } else {
-        output.innerHTML = "Please fill input!";
+        output.innerHTML = "Please insert valid input!";
         output.style.color = "red";
 
     }
@@ -19,8 +19,6 @@ checkBtn.addEventListener("click",() => {
 
 function checkIfLucky(dateStr, num) {
     const sum = addDate(dateStr);
-    console.log("num: " + num);
-    console.log("sum % num: " + sum % num);
     if(sum % num === 0) {
         output.innerHTML = "Yayyy!!!Your Birthdate is LUCKY &#128518;";
         output.style.color = "#163a54";
